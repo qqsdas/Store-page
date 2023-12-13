@@ -1,0 +1,488 @@
+@font-face{
+	font-family: "SF Minced Meat Oblique";
+	src: url("fonts/sf-minced-meat-oblique.woff");
+}
+
+* {
+	font-family: "SF Minced Meat Oblique";
+	padding: 0;		/*Внутренний отступ*/
+	margin: 0;		/*Внешний отступ*/
+}
+body{
+	background-color: #108992;
+}
+header{
+	width: 100%;				/*Ширина*/
+	height: 70px;				/*Высота*/
+	background-color: #3f8ae0;	/*Фоновый цвет*/
+	min-width: 960px;
+	position: fixed; /*Фиксируем нашу шапку*/
+	z-index: 10;
+}
+section.container{
+	width: 960px;
+	margin: 0 auto;
+}
+header section.container{
+	display: flex;				/*Флекс контейнер*/
+	justify-content: space-between; /*Выравниваем элементы в строке с одиновым отступом*/
+}
+header section.container div.logo{
+	padding: 10px 0;
+}
+header section.container div.logo img{
+	height: 50px;
+}
+header section.container nav ul{
+	list-style-type: none;		/*Убрать маркеры у списка*/
+	display: flex;
+}
+header section.container nav ul li a{
+	padding: 0 10px;	
+	text-decoration: none;		/*Уберет подчеркивание у гиперссылок*/
+	display: inline-block;		/*Делает элемент строчно-блочным*/
+	color: white;
+	line-height: 70px; /*Высота линии текста*/
+	font-size: 1.3em;
+}
+header section.container nav ul li a:hover{
+	color: #f1c40f;
+	border-bottom: 2px solid #f1c40f;
+	line-height: 68px; /*Высота линии текста*/
+}
+header section.container div.info{
+	display: flex;
+}
+header section.container div.info div.mode{
+	padding: 5px 0;
+}
+header section.container div.info div.mode p{
+	line-height: 20px;
+	font-size: 0.9em;
+}
+header section.container div.info div.social{
+	display: flex;
+	flex-direction: column; /*Меняем направление оси - в столбик*/
+	padding-left: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+header section.container div.info div.social a{
+	line-height: 20px;
+	text-decoration: none;
+	color: white;
+}
+header section.container div.info div.social a:hover{
+	color: #f1c40f;
+}
+main{
+	padding-top: 70px;
+}
+
+h2{
+	text-align: center; /*Центрует текст*/
+	font-size: 1.5em;
+	padding: 50px 0;
+	text-transform: uppercase;
+}
+p {
+	text-align: justify;
+}
+main p.about-text {
+	font-size: 1.2em;
+	font-style: italic; /*Делает текст курсивным*/
+	line-height: 30px;
+	padding: 0 30px;
+}
+main section.about_company{
+	background-color: white;
+	/*
+	background-image: url("../img/chipLogoPicture.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	*/
+}
+main section.about_company div.firms {
+	display: flex;
+	justify-content: space-around;
+}
+main section.about_company div.firms img {
+	width: 150px;
+	border-radius: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.8) ;/*Тень*/
+}
+main section.about_company div.firms img:hover{
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5) ;/*Тень*/
+}
+main section.about_company form {
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	margin: 0 auto;
+	padding-bottom: 100px;
+	justify-content: space-around;
+	align-items: center;
+	height: 260px;
+}
+main section.about_company form input {
+	width: 400px;
+	margin-top: 10px;
+	padding: 15px;
+	border-radius: 10px;	
+	background-color: #ecf0f1;
+	font-size: 1.2em;
+}
+main section.about_company form button, .btn{
+	width: 200px;
+	border-radius: 10px;
+	padding: 25px;
+	margin-top: 15px;
+	margin-left: 100px;
+	background-color: #ae27a0;
+	text-transform: uppercase;
+	color: white;
+	font-weight: bold;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.8) ;/*Тень*/
+}
+main section.about_company form button:hover{
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6) ;/*Тень*/
+}
+
+main section.advantages{
+	background-color: #4c5b68;
+}
+
+main section.advantages div.advantage{
+	display: flex;
+}
+main section.advantages div.advantage div{
+	width: 240px;
+	color: white;
+}
+main section.advantages div.advantage div img {
+	width: 160px;
+	margin: 0 auto;
+	display: block;
+	border-radius: 20%;
+	background-color: white;
+}
+main section.advantages div.advantage div h3 {
+	text-align: center;
+	padding: 10px 0;
+}
+main section.advantages div.advantage div p{
+	padding: 15px;
+	font-size: 0.9em;
+}
+
+main section.advantages div.advantage div:hover{
+	background-color: white;
+	color: #40739e;
+}
+main section.advantages div.advantage div:hover img {
+	background-color: #40739e;
+}
+/*4.	Блок, содержащий примеры неисправностей */
+
+main section.defects{
+	background-color: white;
+	padding-bottom: 30px;
+}
+
+main section.defects div.defect{
+	display: flex;
+	flex-wrap: wrap;
+}
+main section.defects div.defect div {
+	position: relative;
+	width: 480px;
+}
+main section.defects div.defect div h3{
+	text-align: center;
+	padding-bottom: 20px;
+
+}
+main section.defects div.defect div img{
+	width: 240px;
+	padding-top: 58px;
+	display: block;
+	margin: 0 auto;
+}
+main section.defects div.defect div p.description{
+	font-size: 0.9em;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 60px;
+	font-style: italic;
+}
+main section.defects div.defect div p.price{
+	position: absolute;
+	top: 20px;
+	right: 80px;
+	color: rgb(202, 44, 55);
+	font-weight: bold;
+	font-size: 1.2em;
+	box-shadow: 5px 5px 10px 5px #40739e;
+	border: 2px solid #40739e;
+	padding: 3px;
+}
+main section.defects div.callback{
+	width: 480px;
+	margin: 0 auto;
+	background-color: #40739e;
+	border-radius: 20px;
+}
+main section.defects div.callback form {
+	display: flex;
+	flex-direction: column;
+	height: 260px;
+	justify-content: space-around; 
+}
+main section.defects div.callback form label {
+	text-align: left;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-left: 34px;
+	font-size: 0.8em;
+}
+main section.defects div.callback h3{
+	color: white;
+	font-size: 1.3em;
+	text-align: center;
+	padding: 10px;
+}
+main section.defects div.callback form input{
+	width: 400px;
+	padding: 5px;
+	border-radius: 10px;	
+	background-color: #ecf0f1;
+	font-size: 1.1em;
+	margin: 0 auto;
+}
+main section.defects div.callback form button{
+	margin: 20px auto;
+}
+
+/* Слайдер */
+.slider_one {
+	background-color: #40739e;
+	height: 580px;
+}
+.slider_one .slider {
+	width: 960px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+.slider_one .slider img {
+	width: 800px;
+	height: 400px;
+	display: block;
+	border-radius: 30px;	
+}
+.slider_one .slider input[type="radio"]{
+	display: none;
+}
+.slider_one .slider label {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-color: white;
+	border-radius: 50%;
+	border: 2px solid black;
+	cursor: pointer;
+	margin: 10px 10px;
+	position: relative;
+	top: 10px;
+	z-index: 9;
+}
+.slider_one .slider div.slider-item {
+	display: none;
+	position: absolute;
+	top: 0;
+}
+.slider_one .slider input[type="radio"]:checked + label {
+	background-color: #40739e;
+}
+.slider_one .slider input[type="radio"]:checked + label + div.slider-item{
+	display: block;
+}
+
+/* Слайдер 2*/
+.slider_two {
+	background-color: white;
+	height: 480px;
+}
+.slider_two .slider {
+	width: 960px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+.slider_two .slider img {
+	width: 800px;
+	height: 400px;
+	display: block;
+	border-radius: 30px;	
+}
+.slider_two .slider input[type="radio"]{
+	display: none;
+}
+.slider_two .slider label {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-color: white;
+	border-radius: 50%;
+	border: 2px solid black;
+	cursor: pointer;
+	margin: 10px 10px;
+	position: relative;
+	top: -50px;
+	z-index: 9;
+}
+.slider_two .slider div.slider-item {
+	width: 480px;
+	display: none;
+	position: absolute;
+	top: 0;
+	background-color: #40739e;
+	padding: 20px;
+	border-radius: 20px;
+}
+.slider_two .slider input[type="radio"]:checked + label {
+	background-color: #40739e;
+}
+.slider_two .slider input[type="radio"]:checked + label + div.slider-item{
+	display: block;
+}
+.slider_two .slider div.slider-item :nth-child(1) {
+	color: white;
+	text-align: center;
+}
+.slider_two .slider div.slider-item :nth-child(2) {
+	font-weight: bold;
+	font-style: italic;
+	padding: 10px 0;
+	color: white;
+}
+.slider_two .slider div.slider-item :nth-child(3) {
+	font-style: italic;
+	color: white;
+	text-indent: 20px;
+}
+.slider_two .slider div.slider-item :nth-child(4) {
+	color: white;
+	text-align: right;
+	font-style: italic;
+	padding: 10px 0;
+}
+/*Контакты*/
+section.contacts {
+	background-color: #40739e;
+}
+section.contacts div.info{
+	font-size: 1.2em;
+	font-weight: bold;
+	color: white;
+	display: flex;
+	justify-content: space-around;
+	width: 720px;
+	margin: 0 auto;
+	line-height: 50px;
+}
+section.contacts div.social {
+	display: flex;
+	flex-direction: column;
+	line-height: 40px;
+}
+section.contacts div.social a{
+	text-decoration: none;
+	color: black;
+	text-align: center;
+	display: block;
+	width: 40px;
+	height: 40px;
+	background-color: white;
+	border-radius: 50%;
+	margin: 10px 0;
+}
+section.contacts div.social a:nth-child(1){
+	background-color: #27ae60;
+}
+
+section.contacts div.social a:nth-child(3){
+	background-color: #c0392b;
+}
+
+footer{
+	width: 100%;				/*Ширина*/
+	background-color: #3f8ae0;	/*Фоновый цвет*/
+	min-width: 960px;
+}
+footer section.container{
+	display: flex;
+	justify-content: space-between;
+}
+footer section.container div,
+footer section.container nav {
+	padding: 20px 10px;
+}
+footer section.container div {
+	font-size: 0.70em;
+	color: white;
+	line-height: 18px;
+}
+footer section.container nav {
+	font-size: 0.85em;
+
+}
+footer section.container nav ul {
+	list-style-type: none;
+	line-height: 24px;
+}
+footer section.container nav ul li a{
+	text-decoration: none;
+	color: #ffeaa7;
+}
+footer section.container nav ul li a:hover{
+	color: white
+}
+/*Заказать звонок кнопка*/
+.btn-callme {
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	width: 120px;
+	height: 120px;
+	text-align: center;
+}
+.btn-callme-btm {
+	width: 90px;
+	height: 90px;
+	background-color: #32ff7e;
+	border-radius: 50%;
+	border: 1px solid transparent;
+	font-weight: bold;
+	cursor: pointer;
+	box-shadow: 0 0 0 rgba(255, 255, 255, 0.4);
+	animation: pulse_btn 2s infinite;
+}
+.btn-callme-btm img{
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+}
+/*Анимация*/
+@keyframes pulse_btn {
+	0%{
+		box-shadow: 0 0 0 #32ff7e;
+	}
+	70%{
+		box-shadow: 0 0 40px #32ff7e;
+	}
+	100%{
+		box-shadow: 0 0 0 #32ff7e;
+
+}
